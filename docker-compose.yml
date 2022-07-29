@@ -1,0 +1,21 @@
+version: '3'
+services:
+  siot:
+    container_name: flask
+    volumes:
+      - ./src:/root/src
+    build:
+      context: ./src
+      dockerfile: ./Dockerfile
+    ports:
+      - 5678:5000
+    depends_on:
+      - mysql
+  mysql:
+    container_name: mysql_1
+    image: mysql
+    privileged: true
+    environment:
+      MYSQL_ROOT_PASSWORD : "123456"
+    ports:
+      - 1306:3306
