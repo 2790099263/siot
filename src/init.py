@@ -4,9 +4,9 @@ import api
 # 创建用户数据表，用户数据表收录用户名，密码，用户id
 def MakeDatabase():
     conn = pymysql.connect(host="localhost", user="root", password="123456",
-                           cursorclass=pymysql.cursors.DictCursor,port=1306)
+                           charset='utf8mb4',port=1306)
     cur = conn.cursor()
-    cur.execute("CREATE DATABASE siot IF NOT EXISTS")
+    cur.execute("CREATE DATABASE IF NOT EXISTS siot")
     cur.close()
     conn.close()
 
