@@ -52,11 +52,14 @@ def VerifyCode(email,type_code):
             +'"' + str(email) + '"'
         curs.execute(del_sql)
         conn.commit()
+        conn.close()
+        curs.close()
         return 1
     else:
+        conn.close()
+        curs.close()
         return 0
-    conn.close()
-    curs.close()
+
 # 插入用户，返回user_id,如果返回的是0，则查无此人
 def InsertUser(username,passwd):
     db = api.GetDatabase()
