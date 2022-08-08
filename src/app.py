@@ -39,6 +39,6 @@ def GetVerifyCode():
     return "send successfully"
 
 if __name__ == '__main__':
-    init.MakeDatabase()
-    init.MakeTable()
+    # init.MakeDatabase()
+    # init.MakeTable()
     app.run("0.0.0.0",debug=True)

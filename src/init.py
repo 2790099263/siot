@@ -45,4 +45,5 @@ def MakeTable():
 
 # # 测试代码
 # if __name__ == '__main__':
+#     MakeDatabase()
 #     MakeTable()

@@ -5,7 +5,7 @@ import send
 # 连接数据库，将在后续版本变为从配置文件中读取信息
 def GetDatabase():
     conn = pymysql.connect(
-        host='localhost',
+        host="localhost",
         user='root',
         passwd='123456',
         database='siot',
