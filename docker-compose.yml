@@ -11,11 +11,15 @@ services:
       - 5678:5000
     depends_on:
       - mysql
+#    links:
+#      - mysql
   mysql:
-    container_name: mysql_1
+    container_name: mysql
     image: mysql
-    privileged: true
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD : "123456"
+      MYSQL_ROOT_PASSWORD : 123456
+      MYSQL_DATABASE : siot
+      TZ: Asia/Shanghai
     ports:
       - 1306:3306
