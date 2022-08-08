@@ -14,8 +14,8 @@ def sendMail(message,Subject,sender_show,recipient_show,to_addrs,cc_show=''):
     # :param cc_show: str 抄送人显示，不起实际作用，多个抄送人用','隔开如："xxx,xxxx"
     # '''
     # 填写真实的发邮件服务器用户名、密码
-    user = 'lsc2719@126.com'
-    password = 'GKARIQRHXXGEOMXW'
+    user = 'XXXXXX@126.com'
+    password = 'XXXXXXXXXXXXXXXXXX'
     # 邮件内容
     msg = MIMEText(message, 'plain', _charset="utf-8")
     # 邮件主题描述
