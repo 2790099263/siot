@@ -39,4 +39,4 @@ def SendEmail(user,email,code):
     to_addrs = email
     sendMail(message, Subject, sender_show, recipient_show, to_addrs)
 # if __name__ =='__main__':
-#     SendEmail("lsc2719","2790099263@qq.com",114514)
+    # ...
